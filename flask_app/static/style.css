@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.body {
+  background-image: url('https://www.arte4.com/wp-content/uploads/2018/09/arte4-taller-baile-moderno.jpg');
+  background-size: cover;
+  height: 100vh;
+}
+.search_bar{
+    display: flex;
+}
+.form-control{
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.btn-outline-success{
+    margin-right: 5px;
+
+}
+.container{
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+.col{
+    padding-right: 200px;
+    margin-bottom: 20px;
+}
+p{
+    padding-right: 40px;
+}
+.flip-card, .flip-card-front, .flip-card-back, iframe{
+  border-radius: 15px ;
+  background-color:#5d444b;
+}
+.dance1{
+    padding-left: 30px;
+    margin-bottom: 20px;
+    border-radius:  15px;
+}
+.col_2{
+  width: 1000px;
+  height: 400px;
+}
+
+.d-block {
+    padding-left: 100px;
+    width: 80%;
+    height: 50%;
+}
+.dance_img{
+    width: 250px;
+    height: 150px;
+    
+}
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    border-radius: 1px solid #140707;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background: none;
+    border: 1px solid #140707;
+    
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: #140707;
+    color: #140707;
+    transform: rotateY(180deg);
+
+  }
+
+  .spacer {
+    height: 40vh;
+    padding:0;
+    margin:0;
+  }

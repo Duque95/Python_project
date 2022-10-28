@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    {{user.magazines}}
+    <h1>Edit User</h1>
+    {% with messages = get_flashed_messages() %}
+    <!-- declare a variable called messages -->
+    {% if messages %}
+    <!-- check if there are any messages -->
+    {% for message in messages %}
+    <!-- loop through the messages -->
+    <p>{{message}}</p> <!-- display each message in a paragraph tag -->
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col">
+                <div class="card">
+                    <h5 class="card-header">REGISTER</h5>
+                    <div class="card-body">
+                        {% with messages = get_flashed_messages(with_categories = True) %}
+                        <form action="/update/user" method="post">
+                            <input type="hidden" name="id" value="{{user.id}}">
+                            <div class="mb-3">
+                                <label for="first_name" class="form-label">First Name:</label>
+                                <input type="text" name="first_name" id="first_name" class="form-control"
+                                    value="{{user.first_name}}">
+                                {% if messages %}
+                                {% for category, message in messages %}
+                                {% if category == 'first_name' %}
+                                <span class="form-text text-danger">{{message}}</span>
+                                {% endif %}
+                                {% endfor %}
+                                {% endif %}
+                            </div>
+                            <div class="mb-3">
+                                <label for="last_name" class="form-label">Last Name:</label>
+                                <input type="text" name="last_name" id="last_name" class="form-control"
+                                    value="{{user.last_name}}">
+                                {% if messages %}
+                                {% for category, message in messages %}
+                                {% if category == 'last_name' %}
+                                <span class="form-text text-danger">{{message}}</span>
+                                {% endif %}
+                                {% endfor %}
+                                {% endif %}
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email:</label>
+                                <input type="text" name="email" id="email" class="form-control" value="{{user.email}}">
+                                {% if messages %}
+                                {% for category, message in messages %}
+                                {% if category == 'email' %}
+                                <span class="form-text text-danger">{{message}}</span>
+                                {% endif %}
+                                {% endfor %}
+                                {% endif %}
+                            </div>
+
+                            <div class="d-flex justify-content-end">
+                                <input type="submit" value="REGISTER" class="btn btn-primary">
+                            </div>
+                        </form>
+                        {% endwith %}
+                    </div>
+                </div>
+            </div>
+            <h1>Show</h1>
+            {% for magazine in user.magazines %}
+            <p>{{magazine.name}}</p>
+            {% endfor %}
+</body>
+
+</html>

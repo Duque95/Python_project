@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    justify-content: center;
+    
+}
+.images{
+    padding-left: 200px;
+    margin-top: 40px;
+}
+.navbar{
+    margin-bottom: 40px;
+}
+body{
+    background-color: #382615;
+    background-size: cover;
+    height: 100vh;
+}
+img {
+    box-shadow: 5px 5px  black;
+    margin-bottom: 20px;
+}
+h1{
+    text-shadow: 2px 2px black;
+    padding: 10px;
+}
+.Merengue{
+    background-color: #c38f50;
+}
+.Bachata {
+    background-color: #938c8b;
+}
+.Punta {
+    background-color: #f7d8a8;
+}
+.Zapateado {
+    background-color: #27461d;
+}
+.Cumbia{
+    background-color: #8b6d1b;
+}
+.Country {
+    background-color: #702513;
+}
